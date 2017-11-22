@@ -1,0 +1,35 @@
+
+# Files and folders to ignore from the repo
+
+# Directories/files created for app runtime data #
+##################################################
+__pycache__
+pure_db.sqlite
+config.py
+
+# Logs #
+########
+*.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python Virtualenv #
+#####################
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
