@@ -33,3 +33,8 @@ Thumbs.db
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+
+# VS Code Settings#
+###################
+.vscode/launch.json
+.vscode/settings.json
