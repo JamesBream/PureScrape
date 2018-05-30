@@ -23,3 +23,7 @@ This project is built using **Python 3.5+** and almost certainly won't work on P
 The project uses *PipEnv* to manage dependencies and to avoid you having to manage a virtualenv. Install PipEnv, clone this repo and then run `pipenv install` to create a virtualenv and install all dependencies.
 
 `pipenv shell` will launch the virtualenv and you can then run PureScrape with `python purescrape.py`.
+
+#### Login Credentials
+
+You'll need to have a PureGym PIN and associated email address in order for this to actually function. A blank config file is included, `config_.py` which you should rename to `config.py` and edit accordingly.
