@@ -20,7 +20,7 @@ def main():
     # Get login auth token
     result = session_requests.get(LOGIN_URL)
     tree = html.fromstring(result.text)
-    authenticity_token = list(set(tree.xpath("//input[@name='__RequestVerificationToken']/@value")))[0]
+    auth_token = tree.xpath("/html/body/form/input/@value")[0]
 
     # Create payload
     payload = {
@@ -35,7 +35,7 @@ def main():
         'Host': 'www.puregym.com',
         'Origin': 'https://www.puregym.com',
         'Referer': LOGIN_URL,
-        '__RequestVerificationToken': authenticity_token
+        '__RequestVerificationToken': auth_token
     }
 
     # Perform login
@@ -61,9 +61,7 @@ def main():
     xtree = tree.xpath(
         '//*[@id="main-content"]/div[2]/div/div/div[1]/div/div/div/div[1]/div/p[1]/span/text()'
         )
-    people = (int((re.findall('\d+', str(xtree[0])))[0]))
-
-    #print("Time now: ", datetime.today())
+    people = int(re.findall('\d+', xtree[0])[0])
 
     createdb()
     insertdatapoint(people)
@@ -72,7 +70,7 @@ def main():
 def insertdatapoint(people):
     """Insert a data point into the database at current time"""
     db_cur.execute('''INSERT INTO visitors(datetime, people) VALUES(?, ?)''', (str(datetime.today()), people))
-    print("Data point inserted")
+    print("Data point inserted at " + str(datetime.today()))
 
 def closedb():
     # Ensure all changes have been comitted

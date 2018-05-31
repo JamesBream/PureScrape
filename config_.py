@@ -5,4 +5,4 @@ EMAIL = ""
 PIN = ""
 
 # Path to database
-sqlite_path = ''
+sqlite_path = 'pure_db.sqlite3'

@@ -4,7 +4,10 @@
 # Directories/files created for app runtime data #
 ##################################################
 __pycache__
-pure_db.sqlite
+*.sqlite3
+*.sqlite
+*.db
+
 config.py
 
 # Logs #
