@@ -6,7 +6,7 @@ PureScrape is a personal project designed for my own use in keeping track of how
 
 Written in Python, PureScrape is designed to scrape the PureGym.com member dashboard at a predefined interval in order to return the reported number of visitors at a member's home gym. This information is then collated allowing a better idea of when the gym is busy - mostly a project borne out of curiosity and a love of gathering data.
 
-I'm documenting my progress in tutorial posts on my blog at https:jbream.me - though they might not be available as of yet.
+I'm documenting my progress in a series of posts over on [my blog jbream.me](https://jbream.me/scraping-and-graphing-the-modern-web/) - though they might not all be available as of yet.
 
 
 ### Roadmap
@@ -18,7 +18,7 @@ Beyond this, it is my intention to give PureScrape some graphing capability so t
 
 ### How to Use This?
 
-This project is built using **Python 3.5+** and almost certainly won't work on Python 2.
+This project is built using **Python 3.6** and  won't work on Python 2.
 
 The project uses *PipEnv* to manage dependencies and to avoid you having to manage a virtualenv. Install PipEnv, clone this repo and then run `pipenv install` to create a virtualenv and install all dependencies.
 
